@@ -1,0 +1,130 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+UNIT 1 – Time and Space Complexity Explanation
+
+======================================================================
+1 Recursive Factorial
+=======================================================================
+
+Recurrence Relation:
+T(n) = T(n − 1) + 1
+---------------------------------------------------------------
+Time Complexity:
+In recursive factorial, each function call makes exactly one recursive call until n becomes 1.
+The total number of calls is equal to n.
+
+Therefore,
+Time Complexity = O(n)
+------------------------------------------------------------------
+
+Space Complexity:
+Each recursive call is stored in the call stack.
+The maximum depth of recursion is n.
+
+Therefore,
+Space Complexity = O(n)
+
+=========================================================================
+2️ Fibonacci (Naive Recursive)
+===========================================================================
+
+Recurrence Relation:
+T(n) = T(n − 1) + T(n − 2) + 1
+---------------------------------------------------------------------------
+Time Complexity:
+In naive recursion, each function call generates two further recursive calls.
+
+For example:
+fib(5) calls fib(4) and fib(3)
+fib(4) again calls fib(3) and fib(2)
+
+This leads to repeated computation of the same values multiple times.
+As a result, the total number of calls grows exponentially.
+
+Therefore,
+Time Complexity = O(2ⁿ)
+------------------------------------------------------------
+Why Naive Fibonacci is Inefficient:
+
+The same subproblems are solved multiple times.
+The number of recursive calls increases very rapidly.
+Execution time grows exponentially for large values of n.
+Hence, it is inefficient for large inputs.
+--------------------------------------------------------------
+Space Complexity:
+The maximum depth of recursion is n.
+
+Therefore,
+Space Complexity = O(n)
+
+===============================================================
+3️ Fibonacci (Memoized)
+===============================================================
+
+Concept:
+Memoization stores previously computed values so that each value is calculated only once.
+-----------------------------------------------------------
+Time Complexity:
+Since each Fibonacci value from 0 to n is computed only once,
+Time Complexity = O(n)
+-------------------------------------------------------------
+Space Complexity:
+Memoization storage requires O(n) space.
+Recursion stack requires O(n) space.
+
+Therefore,
+Space Complexity = O(n)
+
+=================================================================
+4️ Tower of Hanoi
+=================================================================
+
+Recurrence Relation:
+T(n) = 2T(n − 1) + 1
+Solving this recurrence gives:
+T(n) = 2ⁿ − 1
+-----------------------------------------------------------------
+Time Complexity:
+The number of moves required to solve the problem doubles with each additional disk.
+
+Therefore,
+Time Complexity = O(2ⁿ)
+------------------------------------------------------------------
+Space Complexity:
+The recursion depth is equal to the number of disks, which is n.
+
+Therefore,
+Space Complexity = O(n)
+
+===============================================================
+5️ Recursive Binary Search
+===============================================================
+
+Recurrence Relation:
+T(n) = T(n/2) + 1
+At each step, the search space is reduced to half of its previous size.
+
+Example:
+n → n/2 → n/4 → n/8 → … → 1
+
+The number of times we can divide n by 2 until it becomes 1 is log₂(n).
+--------------------------------------------------------------------------------
+
+Therefore
+Time Complexity = O(log n)
+
+-----------------------------------------------------------------------------
+Space Complexity:
+The recursion stack depth is equal to log n.
+
+Therefore,
+Space Complexity = O(log n)
+
+==============================================================================
+Conclusion
+-------------------------------------------------------------------------------
+Factorial has linear time complexity.
+Naive Fibonacci has exponential time complexity.
+Memoized Fibonacci has linear time complexity.
+Tower of Hanoi has exponential time complexity.
+Binary Search has logarithmic time complexity.
+-------------------------------------------------------------------------------
