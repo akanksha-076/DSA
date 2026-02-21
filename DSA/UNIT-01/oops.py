@@ -1,16 +1,3 @@
-# class employee:
-#     def __init__(self,emp_id,emp_name,basic_salary):
-#         self.emp_id=emp_id
-#         self.emp_name=emp_name
-#         self.basic_salary=basic_salary
-    
-#     def calc_salary(self,basic_salary):
-#         pass
-
-# class permanent_emp(employee):
-#     pass
-
-# class contract_emp(employee):
 
 # ---------------------------------------------------------
 # STEP 1: Import ABC and abstractmethod for ABSTRACTION
