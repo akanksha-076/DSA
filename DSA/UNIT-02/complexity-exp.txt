@@ -1,0 +1,107 @@
+Unit 2 – Operation Complexity Explanation
+===========================================================================================================================================
+
+1. Dynamic Array
+------------------------------------------------------------------------------------
+
+Append Operation
+Best Case Time Complexity: O(1)
+Worst Case Time Complexity: O(n) (when resizing happens)
+Amortized Time Complexity: O(1)
+
+Explanation:
+When the array becomes full, its capacity is doubled and all elements are copied to a new array, which takes O(n) time. However, resizing does not happen every time. Over multiple insertions, the average cost per append becomes O(1). This is called amortized analysis.
+Pop Operation
+Time Complexity: O(1)
+Space Complexity: O(1)
+----------------------------------------------------------------------------------------
+
+
+2. Singly Linked List (SLL)
+------------------------------------------------------------------------------------------
+
+Insert at Beginning
+Time Complexity: O(1)
+
+Insert at End
+Time Complexity: O(n) (because we traverse the list)
+
+Delete
+Time Complexity: O(n)
+
+Search
+Time Complexity: O(n)
+
+Traverse
+Time Complexity: O(n)
+
+Space Complexity of SLL: O(n) (because n nodes are stored)
+------------------------------------------------------------------------------------------------
+
+3. Doubly Linked List (DLL)
+-------------------------------------------------------------------------------------------------------
+
+Insert at End
+Time Complexity: O(n)
+
+Delete
+Time Complexity: O(n)
+
+Traverse Forward
+Time Complexity: O(n)
+
+Traverse Backward
+Time Complexity: O(n)
+
+Space Complexity of DLL: O(n)
+
+Additional space is used for storing the previous pointer in each node.
+-------------------------------------------------------------------------------------------------------------
+
+
+4. Stack Using Singly Linked List
+-----------------------------------------------------------------------------------------------------------
+
+Push
+Time Complexity: O(1)
+
+Pop
+Time Complexity: O(1)
+
+Peek
+Time Complexity: O(1)
+Space Complexity: O(n)
+
+Explanation:
+All operations are performed at the top of the stack, so no traversal is required.
+-----------------------------------------------------------------------------------------------------------
+
+5. Queue Using Singly Linked List
+-------------------------------------------------------------------------------------------------------
+
+Enqueue
+Time Complexity: O(1)
+
+Dequeue
+Time Complexity: O(1)
+
+Peek
+Time Complexity: O(1)
+Space Complexity: O(n)
+
+Explanation:
+Since both front and rear pointers are maintained, insertion and deletion take constant time.
+------------------------------------------------------------------------------------------------------------------
+
+
+6. Parentheses Checker
+------------------------------------------------------------------------------------------------------------------
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Explanation:
+The expression is scanned once, so time complexity is O(n).
+In the worst case, all characters may be opening brackets, which are stored in the stack. Therefore, space complexity is O(n).
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

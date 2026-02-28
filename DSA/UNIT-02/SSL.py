@@ -1,46 +1,34 @@
-# Node class
 class Node:
     def __init__(self, data):
-        self.data = data      # value store karega
-        self.next = None      # next node ka reference
+        self.data = data
+        self.next = None
 
 
-# Linked List class
-class LinkedList:
+class SinglyLinkedList:
     def __init__(self):
-        self.head = None      # starting node
+        self.head = None
 
-
-    # Insert at beginning
-    def insert_at_beginning(self, data):
+    def insert_beginning(self, data):
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
 
-
-    # Insert at end
-    def insert_at_end(self, data):
+    def insert_end(self, data):
         new_node = Node(data)
-
-        if self.head is None:
+        if not self.head:
             self.head = new_node
             return
 
         temp = self.head
         while temp.next:
             temp = temp.next
-
         temp.next = new_node
 
-
-    # Delete a node
     def delete(self, key):
         temp = self.head
 
-        # If head contains the key
         if temp and temp.data == key:
             self.head = temp.next
-            temp = None
             return
 
         prev = None
@@ -49,14 +37,10 @@ class LinkedList:
             temp = temp.next
 
         if temp is None:
-            print("Value not found")
             return
 
         prev.next = temp.next
-        temp = None
 
-
-    # Search element
     def search(self, key):
         temp = self.head
         while temp:
@@ -65,8 +49,6 @@ class LinkedList:
             temp = temp.next
         return False
 
-
-    # Display list
     def display(self):
         temp = self.head
         while temp:
@@ -75,21 +57,12 @@ class LinkedList:
         print("None")
 
 
-# -------------------------
-# Main Program
-# -------------------------
-
-ll = LinkedList()
-
-ll.insert_at_beginning(10)
-ll.insert_at_beginning(5)
-ll.insert_at_end(20)
-ll.insert_at_end(30)
-
-ll.display()
-
-print("Search 20:", ll.search(20))
-
-ll.delete(20)
-
-ll.display()
+# Demo
+sll = SinglyLinkedList()
+sll.insert_beginning(10)
+sll.insert_end(20)
+sll.insert_end(30)
+sll.display()
+print("Search 20:", sll.search(20))
+sll.delete(20)
+sll.display()
