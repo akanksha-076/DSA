@@ -8,7 +8,7 @@
 queue = []
 
 
-# ---------------- INSERT OPERATION ----------------
+# ---------------- INSERT OPERATION ----------------------
 # This function is used to insert an element into the queue
 def insert():
     # input() is used to take value from the user
