@@ -228,6 +228,7 @@ def main():
 # "__main__" = special string meaning "this file is being run directly"
 # This block ensures main() runs only when we run this file,
 # not when this file is imported into another file
+
 if __name__ == "__main__":
 
     # calling main() to start the program

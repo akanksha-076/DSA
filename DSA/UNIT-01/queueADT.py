@@ -7,7 +7,6 @@
 # A list is used to store queue elements
 queue = []
 
-
 # ---------------- INSERT OPERATION ----------------------
 # This function is used to insert an element into the queue
 def insert():
