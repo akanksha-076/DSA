@@ -1,52 +1,18 @@
 
-# ---------------------------------------------------------
-# STEP 1: Import ABC and abstractmethod for ABSTRACTION
-# ABC = Abstract Base Class
-# abstractmethod = decorator used to define abstract methods
-# ---------------------------------------------------------
 from abc import ABC, abstractmethod
- 
-
-# ---------------------------------------------------------
-# STEP 2: Create an ABSTRACT CLASS named Employee
-# This class cannot be instantiated directly
-# It acts as a blueprint for child classes
-# ---------------------------------------------------------
 class Employee(ABC):
-
-    # -----------------------------------------------------
-    # Constructor method
-    # __init__ is automatically called when object is created
-    # self represents the current object
-    # -----------------------------------------------------
     def __init__(self, emp_id, name, basic_salary):
-        self._emp_id = emp_id          # Protected variable (Encapsulation)
-        self._name = name              # Protected variable
+        self._emp_id = emp_id         
+        self._name = name              
         self._basic_salary = basic_salary
-
-    # -----------------------------------------------------
-    # Abstract method
-    # Child classes MUST implement this method
-    # Demonstrates ABSTRACTION
-    # -----------------------------------------------------
     @abstractmethod
     def calculate_salary(self):
-        pass    # pass means "no implementation here"
+        pass    
 
-
-# ---------------------------------------------------------
-# STEP 3: Create PermanentEmployee class
-# Inherits Employee class (INHERITANCE)
-# ---------------------------------------------------------
 class PermanentEmployee(Employee):
-
-    # -----------------------------------------------------
-    # calculate_salary method
-    # Overrides abstract method (POLYMORPHISM)
-    # -----------------------------------------------------
     def calculate_salary(self):
-        hra = self._basic_salary * 0.20     # HRA = 20% of basic salary
-        da = self._basic_salary * 0.10      # DA = 10% of basic salary
+        hra = self._basic_salary * 0.20     
+        da = self._basic_salary * 0.10      
         total_salary = self._basic_salary + hra + da
         return total_salary
 
