@@ -1,47 +1,16 @@
-# ---------------- QUEUE PROGRAM IN PYTHON ----------------
-# Queue follows FIFO rule
-# FIFO means: First In First Out
-
-
-# Creating an empty list named queue
-# A list is used to store queue elements
 queue = []
-
-# ---------------- INSERT OPERATION ----------------------
-# This function is used to insert an element into the queue
 def insert():
-    # input() is used to take value from the user
-    # int() converts the input into integer
     item = int(input("Enter element to insert: "))
-    
-    # append() adds the element at the end of the list
-    # In queue, insertion always happens at the rear end
     queue.append(item)
-    
-    # print() displays message on the screen
     print(item, "inserted into queue")
-
-
-# ---------------- DELETE OPERATION ----------------
-# This function is used to delete an element from the queue
 def delete():
-    # len(queue) checks the number of elements in the queue
-    # If queue is empty, deletion is not possible
     if len(queue) == 0:
         print("Queue is empty, cannot delete")
     else:
-        # pop(0) removes the first element from the list
-        # In queue, deletion always happens from the front
         removed_item = queue.pop(0)
-        
-        # Display the deleted element
         print(removed_item, "deleted from queue")
-
-
-# ---------------- TRAVERSAL OPERATION ----------------
-# This function is used to display all elements of the queue
 def traversal():
-    # Check if queue is empty
+    
     if len(queue) == 0:
         print("Queue is empty")
     else:
