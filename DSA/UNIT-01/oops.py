@@ -8,6 +8,17 @@ class Employee(ABC):
     @abstractmethod
     def calculate_salary(self):
         pass    
+
+from abc import ABC, abstractmethod
+class Employee(ABC):
+    def __init__(self, emp_id, name, basic_salary):
+        self._emp_id = emp_id         
+        self._name = name              
+        self._basic_salary = basic_salary
+    @abstractmethod
+    def calculate_salary(self):
+        pass    
+
 class PermanentEmployee(Employee):
     def calculate_salary(self):
         hra = self._basic_salary * 0.20     

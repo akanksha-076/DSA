@@ -1,7 +1,11 @@
 class Node:
     def __init__(self, data):
         self.data = data
+
         self.next = None 
+
+        self.next = None
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -20,15 +24,29 @@ class LinkedList:
             self.head = temp.next
             temp = None
             return
+
+
         prev = None
         while temp and temp.data != key:
             prev = temp
             temp = temp.next
+
         if temp is None:
             print("Value not found")
             return
         prev.next = temp.next
         temp = None
+
+
+
+        if temp is None:
+            print("Value not found")
+            return
+
+        prev.next = temp.next
+        temp = None
+
+
 
     def search(self, key):
         temp = self.head
@@ -43,12 +61,15 @@ class LinkedList:
 
         print("Value not found")
 
+
     def display(self):
         temp = self.head
         while temp:
             print(temp.data, end=" -> ")
             temp = temp.next
         print("None")
+
+
 
 ll = LinkedList()
 
